@@ -1,0 +1,21 @@
+{
+  "name": "html_prerit",
+  "version": "1.0.0",
+  "description": "A simple Node.js application using Express",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "Node.js/server.js",
+  "scripts": {
+    "start": "nodemon ./Node.js/server.js",
+    "math": "nodemon ./Node.js/math.js",
+    "cal": "nodemon ./Node.js/Calculator.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

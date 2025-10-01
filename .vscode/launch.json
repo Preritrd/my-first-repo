@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Open HTML in Chrome",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "Open HTML in Chrome",
+            "preLaunchTask": "Open HTML in Chrome"
+        },
+        {
+            "name": "Open HTML in Default Browser",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "Open HTML in Default Browser",
+            "preLaunchTask": "Open HTML in Default Browser"
+        },
+        {
+            "name": "Run Node.js",
+            "type": "node",
+            "request": "launch",
+            "program": "${file}"
+        },
+        {
+            "name": "Run Python",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}"
+        },
+        {
+            "name": "Run Java",
+            "type": "java",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}"
+        },
+        {
+            "name": "Run C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb"
+        },
+        {
+            "name": "Run Local Server",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "Run Local Server",
+            "preLaunchTask": "Run Local Server"
+        }
+    ]
+}

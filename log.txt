@@ -1,0 +1,17 @@
+REST API -> JSCON
+
+Get /users -> HTML Document Render
+Get /api/users ->List all users JSON -> Done
+
+Get /api/users/1 -> Get the user with ID 1
+Get .users/2 -> Get the user with ID 2
+
+Dynamic Parameters
+Get/api/users/:id
+id -> Variable | Dynamic
+
+POST /api/users ->Create new user
+
+PATCH /api/users/1 -> Edit the user with ID 1
+
+DELETE /api/users/1 -> Delete the user with ID 1

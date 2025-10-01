@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #3b2f2f;
+    /* coffee brown */
+    color: #2E3B2E;
+    width: 100%;
+    height: 100%;
+}
+
+.signinsection {
+    margin: 25px;
+    width: 95vw;
+    height: 90vh;
+    margin: 5vh auto;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.signcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 248, 240, 0.9);
+    /* warm cream */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(0, 98, 65, 0.4);
+    /* Starbucks green glow */
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    column-gap: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 0px 7px 8px rgba(189, 224, 254);
+}
+
+.signcontainer .image {
+    width: 60%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 2px 5px #3b2f2f;
+}
+
+.signcontainer .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6),
+        0 0 15px rgba(255, 255, 255, 0.7),
+        inset 0 0 15px rgba(255, 255, 255, 0.6),
+        inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.signcontainer .image img:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.backtopage {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.1rem;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 98, 65, 0.8);
+    /* Starbucks green */
+    color: #fff;
+    top: 30px;
+    left: 655px;
+    cursor: pointer;
+}
+
+.backtopage a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.backtopage a:hover {
+    color: #c0f7d3;
+    /* soft mint green */
+}
+
+.backtopage:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.signcontainer .sign-in {
+    width: 40%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.signincontent {
+    max-width: 60vh;
+    margin: 16px auto;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: #fefaf5;
+    /* off-white coffee cream */
+    /* box-shadow: 0 0 6px rgba(0, 0, 0, 0.4),
+        0 0 4px rgba(0, 98, 65, 0.4),
+        inset 0 0 4px rgba(255, 255, 255, 0.6),
+        inset 0 0 3px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0px 0px 7px 2px grey;
+}
+
+.signincontent h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #3b2f2f;
+    /* dark coffee */
+    margin: 15px;
+}
+
+.signincontent h4 {
+    text-align: center;
+    font-size: 1rem;
+    color: #5a4b4b;
+}
+
+.signincontent a {
+    color: #006241;
+    /* Starbucks green */
+}
+
+.signincontent form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    row-gap: 13px;
+}
+
+.signincontent form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.remember-forgot {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #5a4b4b;
+}
+
+.remember-forgot label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remember-forgot label input {
+    width: 32px;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: #006241;
+}
+
+.createacc {
+    width: 88%;
+    padding: 12px;
+    margin: 15px 10px 10px 24px;
+    background-color: #006241;
+    /* Starbucks green */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.createacc:hover {
+    background-color: #004f34;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    color: #5a4b4b;
+}
+
+hr {
+    width: 30%;
+    height: 1.3px;
+    background-color: rgb(145, 142, 142);
+    border: none;
+}
+
+.btn {
+    width: 88%;
+    padding: 12px;
+    margin: 15px 10px 10px 24px;
+    background-color: #006241;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-google img {
+    width: 50px;
+    height: 30px;
+}
+
+.btn-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-facebook img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.btn-facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

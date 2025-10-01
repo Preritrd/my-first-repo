@@ -1,0 +1,98 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // ✅ Open HTML in Chrome
+        {
+            "label": "Open HTML in Chrome",
+            "type": "shell",
+            "command": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": []
+        },
+        // ✅ Open HTML with system default browser
+        {
+            "label": "Open HTML in Default Browser",
+            "type": "shell",
+            "command": "start",
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": []
+        },
+        // ✅ Run Node.js file
+        {
+            "label": "Run Node.js",
+            "type": "shell",
+            "command": "node",
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": []
+        },
+        // ✅ Run Python file
+        {
+            "label": "Run Python",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": []
+        },
+        // ✅ Run Java (compiles + runs current file)
+        {
+            "label": "Run Java",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "${file}"
+            ],
+            "problemMatcher": [],
+            "dependsOn": [
+                {
+                    "label": "Run Java Program",
+                    "type": "shell",
+                    "command": "java",
+                    "args": [
+                        "${fileBasenameNoExtension}"
+                    ],
+                    "problemMatcher": []
+                }
+            ]
+        },
+        // ✅ Run C++
+        {
+            "label": "Run C++",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileBasenameNoExtension}.exe"
+            ],
+            "problemMatcher": [],
+            "dependsOn": [
+                {
+                    "label": "Execute C++ Program",
+                    "type": "shell",
+                    "command": "${fileBasenameNoExtension}.exe",
+                    "problemMatcher": []
+                }
+            ]
+        },
+        // ✅ Run Live Server (simple Python server)
+        {
+            "label": "Run Local Server",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "http.server",
+                "5500"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Item Added</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Pulse animation for buttons */
+        @keyframes pulse-button {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .pulse {
+            animation: pulse-button 1.5s infinite;
+        }
+
+        /* Fade-in effect */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Floating circles */
+        .float-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: float 6s infinite ease-in-out alternate;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            to {
+                transform: translateY(-50px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="relative bg-gradient-to-br from-orange-500 via-yellow-400 to-red-500 flex items-center justify-center min-h-screen overflow-hidden">
+
+    <!-- Floating circles for dynamic effect -->
+    <div class="float-circle w-64 h-64 bg-yellow-300 -top-20 -left-20"></div>
+    <div class="float-circle w-48 h-48 bg-orange-400 bottom-10 right-10"></div>
+    <div class="float-circle w-32 h-32 bg-red-400 top-1/4 left-1/2"></div>
+
+    <!-- Glassmorphic Card -->
+    <div
+        class="relative z-10 bg-white/20 backdrop-blur-3xl p-12 rounded-3xl shadow-2xl border border-white/30 max-w-md w-full fade-in">
+        <h1 class="text-4xl font-extrabold text-white mb-8 drop-shadow-lg text-center">✅ New Food Item Added!</h1>
+
+        <div class="flex flex-col gap-5">
+            <a href="/update-food"
+                class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white py-4 rounded-2xl shadow-xl hover:scale-105 hover:shadow-yellow-400 transition-transform duration-300 pulse text-lg font-semibold text-center">
+                Add Another Item
+            </a>
+            <a href="/"
+                class="bg-white/30 backdrop-blur-sm text-white py-4 rounded-2xl shadow-lg hover:bg-white/50 hover:scale-105 transition-all duration-300 text-lg font-semibold text-center">
+                Go to Homepage
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>

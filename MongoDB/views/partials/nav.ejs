@@ -1,0 +1,43 @@
+<header class="bg-red-500 text-white p-4 shadow-md">
+  <nav class="container mx-auto flex flex-row justify-between items-center">
+    <ul class="flex flex-row items-center space-x-4 list-none m-0 p-0"
+        style="display:flex;flex-direction:row;align-items:center;gap:1rem;flex-wrap:nowrap;">
+      <li>
+        <a href="/"
+          class="inline-block py-2 px-4 rounded transition duration-300 <%= CurrentPage === 'index' ? 'bg-red-400' : 'hover:bg-red-400' %>">
+          airbnb
+        </a>
+      </li>
+      <li>
+        <a href="/hosthomelist"
+          class="inline-block py-2 px-4 rounded transition duration-300 <%= CurrentPage === 'Home' ? 'bg-red-400' : 'hover:bg-red-400' %>">
+          Homes-List
+        </a>
+      </li>
+      <li>
+        <a href="/favouritelist"
+          class="inline-block py-2 px-4 rounded transition duration-300 <%= CurrentPage === 'favourites' ? 'bg-red-400' : 'hover:bg-red-400' %>">
+          Favourites
+        </a>
+      </li>
+      <li>
+        <a href="/bookings"
+          class="inline-block py-2 px-4 rounded transition duration-300 <%= CurrentPage === 'bookings' ? 'bg-red-400' : 'hover:bg-red-400' %>">
+          Bookings
+        </a>
+      </li>
+      <li>
+        <a href="/hosthomelist"
+          class="inline-block py-2 px-4 rounded transition duration-300 <%= CurrentPage === 'host-homes' ? 'bg-red-400' : 'hover:bg-red-400' %>">
+          Host Homes
+        </a>
+      </li>
+      <li>
+        <a href="/add-home"
+          class="inline-block py-2 px-4 rounded transition duration-300 <%= CurrentPage === 'addHome' ? 'bg-red-400' : 'hover:bg-red-400' %>">
+          Add Home
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

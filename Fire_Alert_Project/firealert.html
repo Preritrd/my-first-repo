@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fire Alert — FireBounce</title>
+    <link rel="stylesheet" href="firealertdesign.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">FB</div>
+            <div>
+                <h1>FireBounce — Instant Fire Alert</h1>
+                <div class="muted">Fast local notifications & webhook alerts</div>
+            </div>
+        </header>
+        <div class="grid">
+            <div>
+                <div class="card">
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <div>
+                            <div class="big" id="mainTitle">All Clear</div>
+                            <div class="muted">Last event: <span id="lastEvent">—</span></div>
+                        </div>
+                        <div class="status">
+                            <div id="statusDot" class="dot"></div>
+                            <div id="statusText" class="muted">No alarm</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:16px">
+                        <div class="sensor-controls">
+                            <button id="simulateFire">Simulate Fire Short</button>
+                            <button id="silenceBtn" style="background:#334155">Silence Alarm</button>
+                            <button id="resetBtn" style="background:#0ea5a4">Reset</button>
+                        </div>
+                        <div class="muted" style="margin-top:8px">This demo simulates an electrical short / smoke
+                            sensor. Replace the <code>sendAlert()</code> implementation to call your real API (webhook,
+                            SMS provider, etc.).</div>
+
+                        <div class="log" id="log"></div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:14px">
+                    <h3>Notifications</h3>
+                    <p class="muted">This page uses the Browser Notifications API + in-page alarm. You must grant
+                        permission when prompted.</p>
+                    <div style="margin-top:10px">
+                        <button id="enableNotif" style="background:#2563eb">Enable Desktop Notifications</button>
+                        <div class="muted" style="margin-top:8px">If you want SMS or phone calls, configure server-side
+                            forwarding (example commented in code).</div>
+                    </div>
+                </div>
+
+                <div class="card about">
+                    <h3>About Us</h3>
+                    <p>PUNITH KUMAR M and Prerit R D — FireBounce project demonstrates immediate alerting when a
+                        possible fire/short is
+                        detected. Use as a starting point to integrate with real sensors and notification services.</p>
+                </div>
+            </div>
+
+            <aside>
+                <div class="card">
+                    <h3>Alert Settings</h3>
+                    <label class="muted">Webhook URL</label>
+                    <input id="webhook" placeholder="https://example.com/your-webhook"
+                        style="width:100%;margin-top:8px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit" />
+                    <div class="muted" style="margin-top:10px">Insert a webhook or server endpoint to receive JSON alert
+                        posts.</div>
+
+                    <hr style="border:none;height:1px;background:rgba(255,255,255,0.03);margin:12px 0">
+
+                    <h4>Quick Actions</h4>
+                    <div style="display:flex;gap:8px;margin-top:8px">
+                        <button id="sendTest">Send Test Alert</button>
+                        <button id="viewDocs" style="background:#6b7280">Docs</button>
+                    </div>
+
+                    <div style="margin-top:14px" class="sms-note">
+                        Server example (Node/Twilio) comment inside the code. Keep credentials server-side — do not
+                        embed API keys in client code.
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:12px">
+                    <h3>Current</h3>
+                    <div class="muted">Status: <strong id="sideStatus">All Clear</strong></div>
+                    <div style="margin-top:8px"><small class="muted">You can connect a microcontroller that POSTs to
+                            this page's webhook to trigger alerts automatically.</small></div>
+                </div>
+            </aside>
+        </div>
+
+        <footer class="muted">Made with care — FireBounce · © <span id="year"></span></footer>
+    </div>
+
+    <audio id="alarmAudio" loop>
+        <source src="Fire_alert.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="firealertJS.js"></script>
+</body>
+
+</html>

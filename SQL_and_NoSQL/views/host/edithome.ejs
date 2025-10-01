@@ -1,0 +1,142 @@
+<%- include('../partials/head') %>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    /* your CSS unchanged */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style-type: none;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #fceabb, #f8b500);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        color: #fff;
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 700;
+        text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    form {
+        width: 100%;
+        max-width: 600px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    input[type="number"] {
+        padding: 16px;
+        border-radius: 12px;
+        border: none;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: inset 4px 4px 8px #d1cfcf, inset -4px -4px 8px #ffffff;
+        background: #f9f9f9;
+    }
+
+    input[type="text"]:focus,
+    input[type="url"]:focus,
+    input[type="number"]:focus {
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(255, 90, 95, 0.3);
+    }
+
+    .btn {
+        padding: 16px;
+        background-color: #ff5a5f;
+        color: white;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 15px rgba(255, 90, 95, 0.4);
+    }
+
+    .btn:hover {
+        background-color: #e14b50;
+        transform: scale(1.02);
+    }
+
+    a {
+        margin-top: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        color: #fff;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #1d347a;
+    }
+
+    @media (max-width: 640px) {
+        form {
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<body>
+    <%- include('../partials/nav') %>
+
+    <h1>
+        <%= editing ? "Edit" : "Register" %> Your Home on Airbnb
+    </h1>
+
+    <form action="<%= editing ? '/edithome/' + home.id : '/add-home' %>" method="POST">
+        <input type="hidden" name="id" value="<%= editing && home ? home.id : '' %>" />
+
+        <input type="text" name="housename" placeholder="House Name" value="<%= editing && home ? home.homeName  : '' %>" required />
+
+        <input type="number" name="price" placeholder="Price per Night" value="<%= editing && home ? home.price : '' %>" required />
+
+        <input type="text" name="location" placeholder="Location" value="<%= editing && home ? home.location : '' %>" required />
+
+        <input type="number" step="0.1" min="0" max="5" name="rating" placeholder="Rating" value="<%= editing && home ? home.rating : '' %>" required />
+
+        <input type="url" name="photoUrl" placeholder="Image URL" value="<%= editing && home ? home.photoUrl : '' %>" required />
+
+        <textarea
+            style="width: 100%; height: 10vh; border: none; outline: 2px solid orange; border-radius: 5px;"
+            name="description"
+            placeholder="Add Description"
+            required><%= editing && home ? home.description : '' %></textarea>
+
+        <input class="btn" type="submit" value="<%= editing ? 'Update Home' : 'Add Home' %>">
+    </form>
+
+    <a href="/">← Back to Homepage</a>
+</body>
+
+</html>

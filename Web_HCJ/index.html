@@ -1,0 +1,230 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contaienr">
+        <div class="box">5</div>
+        <div class="box">5</div>
+        <div class="box">5</div>
+        <div class="box">5</div>
+        <div class="box">5</div>
+    </div>
+</body>
+</html> -->
+
+<!-- <|------------------ ####### ❌ Blocking Example ####### -----------------------|> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blocking Demo</title>
+</head>
+
+<body>
+    <h1>❌ Blocking Example</h1>
+    <button onclick="runBlocking()">Run Blocking Task</button>
+    <p>Try clicking and typing in the input while the blocking task runs ⛔. The page will freeze for 5 seconds.</p>
+    <input type="text" placeholder="Type here...">
+
+    <script>
+        function slowTaskBlocking() {
+            const start = Date.now();
+            while (Date.now() - start < 5000) {
+                // Busy wait for 5 seconds (blocks everything)
+            }
+            return "✅ Done (Blocking)";
+        }
+
+        function runBlocking() {
+            console.log("Start Blocking");
+            const result = slowTaskBlocking(); // ⛔ FREEZES UI
+            console.log(result);
+            console.log("End Blocking");
+            alert("Finished blocking task!");
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!-- <|------------------ ####### Server ✅ Success & ❌ Failure Demo ####### -----------------------|> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blocking vs Non-Blocking with Server Error</title>
+    <style>
+        body.error {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #ffff;
+            color: rgb(72, 71, 71);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .error-title {
+            font-size: 125px;
+        }
+
+        .error-msg {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Blocking vs Non-Blocking Demo</h1>
+
+    <button onclick="runBlocking()">❌ Run Blocking Task (Freezes)</button>
+    <button onclick="runNonBlocking()">✅ Run Non-Blocking Task (Responsive)</button>
+
+    <div id="output">Click a button to test...</div>
+
+    <hr>
+    <h3>Responsiveness Test</h3>
+    <p>Counter (keeps running only in non-blocking): <span id="counter">0</span></p>
+    <input type="text" placeholder="Type here while testing...">
+
+    <script>
+        // live counter
+        let count = 0;
+        setInterval(() => {
+            document.getElementById("counter").innerText = ++count;
+        }, 1000);
+
+        // ❌ Blocking version (freezes UI then shows error)
+        function runBlocking() {
+            document.getElementById("output").innerText = "⏳ Running blocking task (UI frozen)...";
+            const start = Date.now();
+            while (Date.now() - start < 5000) {
+                // Busy wait 5 seconds (blocks everything)
+            }
+            showServerError();
+        }
+
+        // ✅ Non-blocking version (UI responsive then shows error)
+        function runNonBlocking() {
+            document.getElementById("output").innerText = "⏳ Running non-blocking task (UI alive)...";
+            setTimeout(() => {
+                showServerError();
+            }, 5000);
+        }
+
+        // Show full page server error
+        function showServerError() {
+            document.body.className = "error";
+            document.body.innerHTML = `
+        <div class="error-title">505 Server Error</div>
+        <div class="error-msg">Oops! The server rejected your request.</div>
+    `;
+        }
+    </script>
+</body>
+
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="price">Price: ₹<span id="priceValue">200</span></label>
+        <input type="range" id="price" name="Price" min="200" max="1000" step="1" value="200"
+            oninput="priceValue.textContent = this.value">
+    </form>
+</body>
+
+</html> -->
+
+
+<!-- 
+        .authbg1 img {
+            width: 226px;
+            height: 285px;
+            animation: hideimg 3s ease-in-out 1;
+        }
+
+        .authbg2 {
+            position: absolute;
+            top: 120px;
+            right: 542px;
+        }
+
+        .authbg2 img {
+            width: 226px;
+            height: 285px;
+        }
+
+        .authbg3 {
+            position: absolute;
+            top: 405px;
+            left: 542px;
+        }
+
+        .authbg3 img {
+            width: 226px;
+            height: 285px;
+        }
+
+        .authbg4 {
+            position: absolute;
+            top: 405px;
+            right: 542px;
+        }
+
+        .authbg4 img {
+            width: 226px;
+            height: 285px;
+        }
+
+        @keyframes hideimg {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        } -->
+
+
+<!-- 
+<script>
+    setTimeout(() => {
+        const imgs = document.querySelectorAll('.authImg');
+
+        imgs.forEach(img => {
+            img.classList.add('hideimg');
+
+            setTimeout(() => {
+                img.style.display = 'none';
+            }, 3000); // match to your fade duration
+        });
+    }, 2000); // delay before fade starts
+</script>
+
+
+<div class="authbg1"> <img class="authImg" src="Authbg_r1_c1_processed_by_imagy.png" alt=""> </div>
+<div class="authbg2"> <img class="authImg" src="Authbg_r2_c2_processed_by_imagy.png" alt=""> </div>
+<div class="authbg3"> <img class="authImg" src="Authbg_r3_c3_processed_by_imagy.png" alt=""> </div>
+<div class="authbg4"> <img class="authImg" src="Authbg_r4_c4_processed_by_imagy.png" alt=""> </div> -->

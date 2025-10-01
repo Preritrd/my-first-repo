@@ -1,0 +1,45 @@
+<%- include('../partials/head') %>
+
+  <html>
+
+  <body>
+    <h1>Welcome to Airbnb</h1>
+    <main>
+      <h2>Here Are Our Favourite Homes</h2>
+      <ul style="padding: 0;">
+        <% if (registerhomes && registerhomes.length> 0) { %>
+          <% registerhomes.forEach(home=> { %>
+            <li style="margin-bottom:20px; list-style:none; border:1px solid #ccc; padding:15px; border-radius:8px;">
+              <h3>
+                <%= home.housename %> <span style="float:right;">❤️</span>
+              </h3>
+
+              <img src="<%= home.photoUrl %>" alt="<%= home.housename %>"
+                style="width:100%; max-width:300px; height:auto; border-radius:8px; margin-bottom:10px;">
+
+              <p><strong>Location:</strong>
+                <%= home.location %>
+              </p>
+              <p><strong>Price:</strong> ₹<%= home.price %>
+              </p>
+              <p><strong>Rating:</strong>
+                <%= home.rating %> ⭐
+              </p>
+              <form action="/deletefavourite/ <%= home.id %>" method="POST"
+                onsubmit="return confirm('Are you sure you want to remove this home from your favourites?');">
+                <button type="submit"
+                  style="background-color:#ff4d4d; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer; width: 200px; padding: 0.5em;; font-size:1rem;">
+                  Remove from Favourites
+                </button>
+            </li>
+            <% }) %>
+              <% } else { %>
+                <li style="list-style:none; padding:2rem; font-size:1.2rem;">
+                  No Home Added to FavouriteList
+                </li>
+                <% } %>
+      </ul>
+    </main>
+  </body>
+
+  </html>

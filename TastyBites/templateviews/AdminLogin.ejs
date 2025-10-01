@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Pulsing neon button */
+        @keyframes neon-pulse {
+            0%, 100% { box-shadow: 0 0 10px #06b6d4, 0 0 20px #06b6d4, 0 0 30px #06b6d4; }
+            50% { box-shadow: 0 0 20px #06b6d4, 0 0 30px #06b6d4, 0 0 40px #06b6d4; }
+        }
+        .neon-pulse { animation: neon-pulse 1.5s infinite alternate; }
+
+        /* Fade-in animation */
+        .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        /* Floating background circles */
+        .float-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: float 20s infinite linear;
+        }
+        @keyframes float {
+            from { transform: translateY(0px) rotate(0deg); }
+            to { transform: translateY(-200px) rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body class="relative bg-gray-900 min-h-screen flex items-center justify-center overflow-hidden">
+
+    <!-- Floating circles for dynamic effect -->
+    <div class="float-circle w-64 h-64 bg-cyan-500 -top-20 -left-20"></div>
+    <div class="float-circle w-48 h-48 bg-cyan-400 bottom-10 right-10"></div>
+    <div class="float-circle w-32 h-32 bg-cyan-300 top-1/4 left-1/2"></div>
+
+    <!-- Glassmorphic Form Container -->
+    <div class="relative z-10 bg-gray-800/40 backdrop-blur-3xl border border-gray-700/20 p-12 rounded-3xl shadow-2xl max-w-md w-full fade-in">
+        <h1 class="text-5xl font-extrabold text-cyan-400 text-center mb-8 tracking-wider drop-shadow-lg">Admin Login</h1>
+
+        <form action="/update-food" method="POST" class="flex flex-col gap-6">
+            <input type="text" name="username" placeholder="Username" required
+                class="p-4 rounded-xl bg-gray-700/30 placeholder-cyan-200 text-white border border-gray-600/30 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition duration-300 backdrop-blur-sm" />
+            <input type="password" name="password" placeholder="Password" required
+                class="p-4 rounded-xl bg-gray-700/30 placeholder-cyan-200 text-white border border-gray-600/30 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition duration-300 backdrop-blur-sm" />
+
+            <button type="submit"
+                class="neon-pulse bg-cyan-400/40 text-white font-bold py-4 rounded-2xl shadow-xl hover:scale-105 hover:shadow-cyan-400 transition-transform duration-300">
+                Login
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>

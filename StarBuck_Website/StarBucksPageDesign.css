@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ffffc7;
+    color: #2E3B2E;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.signinsection {
+    margin: 25px;
+    width: 95vw;
+    height: 90vh;
+    margin: 5vh auto;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.signcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: #141E30;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 15px;
+    column-gap: 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 0px 7px 4px rgba(189, 224, 254);
+}
+
+
+.signcontainer .image {
+    width: 58%;
+    height: 98%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 4px rgba(189, 224, 254);
+}
+
+.signcontainer .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow:
+        0 0 25px rgba(0, 0, 0, 0.6),
+        /* strong black outer glow all sides */
+        0 0 15px rgba(255, 255, 255, 0.8),
+        /* bright white glow */
+        inset 0 0 15px rgba(255, 255, 255, 0.8),
+        /* shiny inside glow */
+        inset 0 0 10px rgba(0, 0, 0, 0.4);
+    /* soft inner darkness */
+}
+
+.signcontainer .image img:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.backtopage {
+    position: absolute;
+    z-index: 2;
+    font-size: 1.1rem;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: rgba(90, 85, 85, 0.5);
+    color: #fff;
+    top: 30px;
+    left: 655px;
+    cursor: pointer;
+}
+
+.backtopage a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.backtopage a:hover {
+    color: #b1ff75;
+}
+
+.backtopage:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.signcontainer .sign-in {
+    width: 40%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.signincontent {
+    max-width: 60vh;
+    max-height: 85vh;
+    margin: 6px auto;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 12px 1px rgba(189, 224, 254);
+}
+
+.signincontent h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 15px;
+}
+
+.signincontent h4 a {
+    color: rgb(86, 86, 217);
+}
+
+.signincontent h4 {
+    text-align: center;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.signincontent a {
+    color: #9fdba5;
+}
+
+.signincontent form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    row-gap: 13px;
+}
+
+.signincontent form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.createname {
+    border: none;
+    outline: none;
+    display: flex;
+    column-gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.emoji {
+    font-size: 1.05rem;
+    color: #ffffff;
+}
+
+.emoji label input {
+    width: 45px;
+    font-size: 10px;
+}
+
+.emoji label a {
+    color: rgb(86, 86, 217);
+}
+
+.createacc {
+    width: 88%;
+    padding: 12px;
+    margin: 15px 10px 10px 24px;
+    background-color: rgb(86, 86, 217);
+    color: #ffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    color: #ffffff;
+}
+
+hr {
+    width: 30%;
+    height: 1.3px;
+    background-color: rgb(145, 142, 142);
+    border: none;
+}
+
+.btn {
+    width: 88%;
+    padding: 12px;
+    margin: 15px 10px 10px 24px;
+    background-color: rgb(86, 86, 217);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #ffff !important;
+}
+
+.btn-google img {
+    width: 50px;
+    height: 30px;
+}
+
+.btn-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-facebook img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.btn-facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode button {
+    background-color: orange;
+    color: #fff;
+}
+
+.dark-mode .signcontainer {
+    background-color: #000000;
+    flex-direction: row;
+}
+
+.dark-mode .signcontainer h1 {
+    color: #bde0fe;
+}
+
+.dark-mode .signcontainer h4 {
+    color: #bde0fe;
+}
+
+.dark-mode .emoji label {
+    color: #bde0fe;
+}
+
+.dark-mode .line {
+    color: #bde0fe;
+}
