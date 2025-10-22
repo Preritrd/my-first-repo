@@ -5,9 +5,12 @@ const customerrouter = express.Router();
 customerrouter.get("/", (req, res) => {
     res.render("Home", { PageTitle: "Welcome to TastyBites" });
 });
+<<<<<<< HEAD
 customerrouter.post("/", (req, res) => {
     res.render("Home", { PageTitle: "Welcome to TastyBites" });
 });
+=======
+>>>>>>> 6d661721bb9966e7ab773bbe42b8ddd61a591fff
 customerrouter.post("/menu", (req, res) => {
     res.send("<h1> Here is our delicious menu, Working in Processing...... </h1>");
 });
