@@ -1,0 +1,39 @@
+<%- include('../partials/head') %>
+
+    <body>
+        <h1>Welcome to Airbnb</h1>
+        <%- include('../partials/nav') %>
+
+            <main>
+                <h2>Here Are Our Registered Homes</h2>
+                <ul style="padding: 0;">
+                    <% if (registerhomes && registerhomes.length> 0) { %>
+                        <% registerhomes.forEach(home=> { %>
+                            <li
+                                style="margin-bottom:20px; list-style:none; border:1px solid #ccc; padding:15px; border-radius:8px;">
+                                <h3>
+                                    <%= home.housename %>
+                                </h3>
+                                <img src="<%= home.photoUrl %>" alt="<%= home.housename %>"
+                                    style="width:100%; max-width:300px; height:auto; border-radius:8px; margin-bottom:10px;">
+                                <p><strong>Location:</strong>
+                                    <%= home.location %>
+                                </p>
+                                <p><strong>Price:</strong> ₹<%= home.price %>
+                                </p>
+                                <p><strong>Rating:</strong>
+                                    <%= home.rating %> ⭐
+                                </p>
+                                <a class="achor-detail" href="/home/<%=home.id %>">Details</a>
+                                <%- include('../partials/favourites', { home: home }) %>
+                            </li>
+                            <% }) %>
+                                <% } else { %>
+                                    <li style="list-style:none; padding:2rem; font-size:1.2rem;">No homes registered
+                                        yet.</li>
+                                    <% } %>
+                </ul>
+            </main>
+    </body>
+
+    </html>

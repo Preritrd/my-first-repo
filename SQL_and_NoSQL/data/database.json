@@ -1,0 +1,34 @@
+[
+  {
+    "housename": "Parvathi",
+    "price": "155",
+    "location": "Bengaluru",
+    "rating": "5",
+    "photoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp8Wo54-g0K9WUsnXYdXHVq3z85pfo8XD6Mg&s",
+    "id": "vnyfoc9l"
+  },
+  {
+    "housename": "Vishnu",
+    "price": "100000000000",
+    "location": "Bengaluru",
+    "rating": "5",
+    "photoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKD2GtD_RWD8zRM-EIFvTDM8nHF4uxSQf2ZA&s",
+    "id": "6x2qol5v"
+  },
+  {
+    "housename": "Ganesh",
+    "price": "100000000000",
+    "location": "Bengaluru",
+    "rating": "5",
+    "photoUrl": "https://previews.123rf.com/images/takseller/takseller2306/takseller230614692/207726732-night-view-of-a-luxury-mansion-with-swimming-pool-and-dramatic-sky.jpg",
+    "id": "y1rnu5hg"
+  },
+  {
+    "housename": "Shiva",
+    "price": "100000000000",
+    "location": "Bengaluru",
+    "rating": "5",
+    "photoUrl": "https://i.pinimg.com/736x/da/9f/87/da9f873c8348d752409dace3b28a2182.jpg",
+    "id": "02q4vs3w"
+  }
+]

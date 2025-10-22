@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Food Chart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Pulsing neon button */
+        @keyframes neon-pulse {
+            0%, 100% { box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 30px #00fff0; }
+            50% { box-shadow: 0 0 20px #00fff0, 0 0 30px #00fff0, 0 0 40px #00fff0; }
+        }
+        .neon-pulse { animation: neon-pulse 1.5s infinite alternate; }
+
+        /* Fade-in animation */
+        .fade-in { opacity: 0; animation: fadeIn 1s forwards; }
+        @keyframes fadeIn { to { opacity: 1; } }
+
+        /* Floating background circles */
+        .float-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: float 6s infinite ease-in-out alternate;
+        }
+        @keyframes float {
+            from { transform: translateY(0px) rotate(0deg); }
+            to { transform: translateY(-50px) rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body class="relative bg-gradient-to-r from-indigo-900 via-purple-800 to-pink-900 min-h-screen flex items-center justify-center overflow-hidden">
+
+    <!-- Floating circles for dynamic effect -->
+    <div class="float-circle w-64 h-64 bg-pink-500 -top-20 -left-20"></div>
+    <div class="float-circle w-48 h-48 bg-purple-500 bottom-10 right-10"></div>
+    <div class="float-circle w-32 h-32 bg-indigo-500 top-1/4 left-1/2"></div>
+
+    <!-- Glassmorphic Form Container -->
+    <div class="relative z-10 bg-white/10 backdrop-blur-3xl border border-white/20 p-12 rounded-3xl shadow-2xl max-w-md w-full fade-in">
+        <h1 class="text-5xl font-extrabold text-white text-center mb-8 tracking-wider drop-shadow-lg">Update Food Menu</h1>
+
+        <form action="/" method="POST" class="flex flex-col gap-6">
+            <input type="text" name="fooditem" placeholder="Enter Food Item" required
+                class="p-4 rounded-xl bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition duration-300 backdrop-blur-sm" />
+            <input type="text" name="price" placeholder="Enter Price" required
+                class="p-4 rounded-xl bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition duration-300 backdrop-blur-sm" />
+            <input type="text" name="Time" placeholder="Time needed for delivery" required
+                class="p-4 rounded-xl bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition duration-300 backdrop-blur-sm" />
+            <input type="text" name="rating" placeholder="Rate the food (1-5)" required
+                class="p-4 rounded-xl bg-white/20 placeholder-white text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition duration-300 backdrop-blur-sm" />
+
+            <button type="submit"
+                class="neon-pulse bg-cyan-400/40 text-white font-bold py-4 rounded-2xl shadow-xl hover:scale-105 hover:shadow-cyan-400 transition-transform duration-300">
+                Submit
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>

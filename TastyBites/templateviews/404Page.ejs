@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found</title>
+    <style>
+        /* Body and layout */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Background gradient animation */
+        .background-gradient {
+            position: absolute; 
+            inset: 0;
+            background: linear-gradient(135deg, #FF8C00, #FFD700, #FFA500);
+            filter: blur(30px);
+            opacity: 0.2;
+            animation: moveBg 15s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes moveBg {
+            0% {
+                background-position: 0 0, 50px 50px;
+            }
+
+            100% {
+                background-position: 200px 200px, 150px 150px;
+            }
+        }
+
+        /* Particle background */
+        .particles {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 25% 25%, rgba(255, 200, 0, 0.03) 1px, transparent 1px);
+            background-size: 100px 100px;
+            animation: moveBg 30s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Main container */
+        .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 40px;
+            animation: fadeIn 1s forwards;
+            margin-bottom: 215px;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* 404 text */
+        .error-code {
+            font-size: 12rem;
+            font-weight: 900;
+            color: #FFD700;
+            position: relative;
+            display: inline-block;
+            animation: neonPulse 1.5s infinite alternate;
+            margin-bottom: 0px;
+        }
+
+        /* White border around 404 */
+        .error-code::before {
+            content: '404';
+            position: absolute;
+            inset: 0;
+            color: transparent;
+            -webkit-text-stroke: 2px white;
+        }
+
+        @keyframes neonPulse {
+
+            0%,
+            100% {
+                text-shadow: 0 0 5px #FFA500, 0 0 10px #FFD700;
+            }
+
+            50% {
+                text-shadow: 0 0 10px #FFA500, 0 0 20px #FFD700;
+            }
+        }
+
+        /* Subtext */
+        .subtext {
+            color: #e5e7eb;
+            font-size: 2rem;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            max-width: 800px;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #000;
+            font-weight: bold;
+            padding: 16px 48px;
+            border-radius: 40px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background-gradient"></div>
+
+    <div class="particles"></div>
+
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <p class="subtext">Oops! This page doesn’t exist. Looks like you took a wrong turn.</p>
+        <a href="/" class="btn">← Back to Home</a>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Neon Pulse Animation */
+        @keyframes neon-pulse {
+            0%, 100% {
+                text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+            }
+            50% {
+                text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+            }
+        }
+
+        .neon-pulse {
+            animation: neon-pulse 1.5s infinite alternate;
+        }
+
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Glitch Animation */
+        @keyframes glitch {
+            0% { clip: rect(44px, 9999px, 56px, 0); transform: translate(-2px, -2px); }
+            10% { clip: rect(12px, 9999px, 85px, 0); transform: translate(2px, 2px); }
+            20% { clip: rect(78px, 9999px, 92px, 0); transform: translate(-2px, 0); }
+            30% { clip: rect(20px, 9999px, 40px, 0); transform: translate(2px, -2px); }
+            40% { clip: rect(10px, 9999px, 50px, 0); transform: translate(-2px, 2px); }
+            50% { clip: rect(44px, 9999px, 56px, 0); transform: translate(2px, -2px); }
+            60% { clip: rect(12px, 9999px, 85px, 0); transform: translate(-2px, 2px); }
+            70% { clip: rect(78px, 9999px, 92px, 0); transform: translate(2px, 0); }
+            80% { clip: rect(20px, 9999px, 40px, 0); transform: translate(-2px, -2px); }
+            90% { clip: rect(10px, 9999px, 50px, 0); transform: translate(2px, 2px); }
+            100% { clip: rect(44px, 9999px, 56px, 0); transform: translate(0, 0); }
+        }
+
+        .glitch {
+            position: relative;
+            color: #0ff;
+            font-size: 6rem;
+            font-weight: 800;
+            animation: glitch 1s infinite;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+        }
+
+        .glitch::before {
+            animation: glitch 1s infinite;
+            color: #f0f;
+            z-index: -1;
+        }
+
+        .glitch::after {
+            animation: glitch 1.2s infinite;
+            color: #ff0;
+            z-index: -2;
+        }
+
+        /* Particle Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,255,255,0.1) 1px, transparent 1px),
+                        radial-gradient(circle, rgba(255,0,255,0.1) 1px, transparent 1px);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px;
+            z-index: 0;
+            animation: moveBg 10s linear infinite;
+        }
+
+        @keyframes moveBg {
+            0% { background-position: 0 0, 50px 50px; }
+            100% { background-position: 100px 100px, 150px 150px; }
+        }
+
+        /* Button Glow */
+        .neon-button {
+            transition: 0.3s;
+        }
+
+        .neon-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black flex items-center justify-center min-h-screen relative overflow-hidden">
+    <div class="relative z-10 bg-gray-900/50 backdrop-blur-md p-12 rounded-3xl shadow-2xl border border-gray-700/50 text-center max-w-md w-full fade-in">
+        <h1 class="glitch mb-4" data-text="404">404</h1>
+        <p class="text-lg text-gray-300 mb-8">Sorry! The page you are looking for does not exist.</p>
+
+        <a href="/"
+            class="neon-button bg-cyan-500 text-white font-bold py-4 px-8 rounded-2xl shadow-lg inline-block">
+            ← Back to Homepage
+        </a>
+    </div>
+</body>
+
+</html> -->

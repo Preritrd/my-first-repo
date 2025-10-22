@@ -1,0 +1,261 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Good Morning</title>
+    </head>
+    <body>
+        <h1>Good Morning</h1>
+        <h1>Never Ever Give Up!!!!, Work Hard</h1>
+        <h1>It's Not Over Until You Achieve It </h1>
+        <h2>Early Access Give Success</h2>
+    </body>
+</html> -->
+
+<!-- || --------------------------||====|> NEW CODE <|====||<------------------------------ || -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        h1 {
+            color: rgb(209, 240, 5);
+        }
+
+        .h1 {
+            color: blue;
+            color: red !important;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        .btn {
+            background-color: rgb(0, 255, 76);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: orange;
+        }
+
+        .btn:visited {
+            background-color: rgb(2, 14, 255);
+            /*✔️ :visited → works only with <a href="...">*/
+            /*❌ Doesn’t work on <button> or <div>*/
+            /*✔️ Use for styling links that users have already clicked*/
+            /* color after visiting */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1">CodeWithHarry</h1>
+    <p>This is the p tag</p>
+    <a href="#">This is the anchor (a) tag</a>
+    <button class="btn">Click Me</button>
+</body>
+
+</html> -->
+
+
+
+<!-- || --------------------------||====|> NEW CODE <|====||<------------------------------ || -->
+
+<!-- <|-------------------------------------- ## Important ## --------------------------------------|> -->
+
+<!-- 📘 HTML & CSS Frequently Used Syntax with Comments -->
+
+<!-- HTML: Structure and Tags -->
+<!DOCTYPE html> <!-- Declares HTML5 document -->
+<html>
+
+<head>
+    <title>Page Title</title> <!-- Sets the browser tab title -->
+</head>
+
+<body>
+    <h1>Heading 1</h1> <!-- Largest heading -->
+    <p>This is a paragraph.</p> <!-- Paragraph text -->
+
+    <strong>Bold Text</strong> <!-- Bold -->
+    <em>Italic Text</em> <!-- Italic -->
+    <br> <!-- Line break -->
+    <hr> <!-- Horizontal line -->
+
+    <!-- Links and Images -->
+    <a href="https://example.com">Visit Site</a> <!-- Link -->
+    <img src="image.jpg" alt="Description"> <!-- Image -->
+
+    <!-- Lists -->
+    <ul> <!-- Unordered list -->
+        <li>Item 1</li>
+    </ul>
+
+    <ol> <!-- Ordered list -->
+        <li>Item 1</li>
+    </ol>
+
+    <!-- Tables -->
+    <table>
+        <tr>
+            <th>Header</th>
+            <th>Header</th>
+        </tr>
+        <tr>
+            <td>Data</td>
+            <td>Data</td>
+        </tr>
+    </table>
+
+    <!-- Form -->
+    <form action="/submit" method="post">
+        <input type="text" name="username"> <!-- Text input -->
+        <input type="password" name="password"> <!-- Password input -->
+        <input type="submit" value="Login"> <!-- Submit button -->
+    </form>
+
+    <!-- Media -->
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+</body>
+
+</html>
+
+<!-- CSS: Syntax and Examples -->
+<style>
+    /* Basic Selector Syntax */
+    selector {
+        property: value;
+    }
+
+    /* Common Selectors */
+    * {}
+
+    /* Universal selector */
+    div {}
+
+    /* Type selector */
+    .class {}
+
+    /* Class selector */
+    #id {}
+
+    /* ID selector */
+    div p {}
+
+    /* Descendant selector */
+    div>p {}
+
+    /* Direct child selector */
+
+    /* Text Styling */
+    color: red;
+    /* Text color */
+    font-size: 16px;
+    /* Font size */
+    font-family: Arial,
+    sans-serif;
+    /* Font style */
+    font-weight: bold;
+    /* Bold text */
+    text-align: center;
+    /* Center align */
+    text-decoration: underline;
+    /* Underline text */
+    line-height: 1.5;
+    /* Line spacing */
+
+    /* Box Model */
+    width: 100px;
+    /* Element width */
+    height: 50px;
+    /* Element height */
+    padding: 10px;
+    /* Inner space */
+    margin: 20px;
+    /* Outer space */
+    border: 1px solid black;
+    /* Border */
+    box-sizing: border-box;
+    /* Includes border in size */
+
+    /* Backgrounds */
+    background-color: #f0f0f0;
+    /* Background color */
+    background-image: url('image.jpg');
+    /* Background image */
+    background-size: cover;
+    /* Resize to fit */
+    background-position: center;
+    /* Center the image */
+
+    /* Positioning */
+    position: relative;
+    top: 10px;
+    left: 20px;
+
+    position: absolute;
+    position: fixed;
+    position: sticky;
+
+    /* Display & Flexbox */
+    display: block;
+    display: inline;
+    display: flex;
+    display: grid;
+
+    justify-content: center;
+    /* Flex/grid horizontal align */
+    align-items: center;
+    /* Flex/grid vertical align */
+    flex-direction: row;
+    /* Flex direction */
+    gap: 10px;
+    /* Space between items */
+
+    /* Borders & Radius */
+    border: 2px solid #000;
+    /* Border */
+    border-radius: 8px;
+    /* Rounded corners */
+
+    /* Transitions & Animation */
+    transition: all 0.3s ease;
+    /* Smooth effect */
+
+    @keyframes fade {
+        from {
+            opacity: 0;
+        }
+
+        /* Animation start */
+        to {
+            opacity: 1;
+        }
+
+        /* Animation end */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        body {
+            background-color: lightblue;
+            /* Change on small screens */
+        }
+    }
+</style>

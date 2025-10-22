@@ -1,0 +1,20 @@
+{
+    "liveServer.settings.port": 5500,
+    "liveServer.settings.host": "127.0.0.1",
+    "liveServer.settings.root": "/",
+    "liveServer.settings.wait": 500,
+    "cSpell.words": [
+        "amountval",
+        "currcode",
+        "engobj",
+        "Ganesh",
+        "greetanim",
+        "newsrc",
+        "objvariable",
+        "Saraswati",
+        "signcontainer",
+        "songul",
+        "sparr"
+    ],
+    "livePreview.defaultPreviewPath": "/Web_HCJ/Assignment.html"
+}

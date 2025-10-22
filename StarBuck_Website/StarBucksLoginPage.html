@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login -> Page</title>
+    <link rel="stylesheet" href="StarBucksLoginDesign.css">
+</head>
+
+<body>
+    <section class="signinsection">
+        <div class="signcontainer">
+            <div class="image">
+                <img src="StarbuckLogInbg.jpg" alt="Background">
+            </div>
+            <div class="backtopage">
+                <a href="StarBucks.html">Back to website ➜</a>
+            </div>
+
+            <div class="sign-in">
+                <div class="signincontent">
+                    <h1>Log In</h1>
+                    <h4>Don't have an account? <a href="StarBucksSignInPage.html">Create one</a></h4>
+
+                    <form action="StarBucks.html" method="post">
+                        <input type="email" placeholder="Email" name="email" required>
+                        <input type="password" placeholder="Enter your password" name="password" required>
+
+                        <div class="remember-forgot">
+                            <label>
+                                <input type="checkbox" name="remember"> Remember me
+                            </label>
+                            <a href="#" class="forgot">Forgot Password?</a>
+                        </div>
+
+                        <button class="createacc" type="submit">Log In</button>
+                    </form>
+
+                    <div class="line">
+                        <hr> Or continue with
+                        <hr>
+                    </div>
+
+                    <button class="btn btn-google">
+                        <img src="Googlelogo.png" alt="Google">
+                        <a href="#" target="_blank">Google</a>
+                    </button>
+
+                    <button class="btn btn-facebook">
+                        <img src="FacebookLogobg.png" alt="Facebook">
+                        <a href="#" target="_blank">Facebook</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+
+<body>
+    <h1>Welcome to Airbnb</h1>
+    <%- include('partials/nav') %>
+
+    <main>
+        <h2>Here Are Our Registered Homes</h2>
+        <ul>
+            <% if (registerhomes && registerhomes.length > 0) { %>
+                <% registerhomes.forEach(home => { %>
+                    <li>
+                        <img src="<%= home.photo %>" alt="<%= home.housename %>">
+                        <h3><%= home.housename %></h3>
+                        <p><strong>Location:</strong> <%= home.location %></p>
+                        <p><strong>Price:</strong> ₹<%= home.price %></p>
+                        <p><strong>Rating:</strong> <%= home.rating %> ⭐</p>
+                    </li>
+                <% }) %>
+            <% } else { %>
+                <li style="text-align: center; padding: 30px; font-size: 1.2rem;">No homes registered yet.</li>
+            <% } %>
+        </ul>
+    </main>
+</body>
+</html>

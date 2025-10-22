@@ -1,0 +1,24 @@
+<head>
+    <%- include('partials/head') %>
+
+</head>
+
+<body>
+    <h1>Add Home to Airbnb</h1>
+    <%- include('partials/nav') %>
+        <form action="/add-home" method="POST">
+            <div class="flex">
+                <input type="text" name="housename" placeholder="Enter the name of your house" required>
+                <input type="text" name="price" placeholder="Price per Night Stage" required>
+                <input type="text" name="location" placeholder="Enter Your location" required>
+                <input type="text" name="rating" placeholder="Rating" required>
+                <input type="text" name="photo" placeholder="Enter image URL" required>
+                <input class="btn" type="submit" value="Submit">
+            </div>
+        </form>
+        <main>
+            <a href="/" alt="link">Back to Homepage</a>
+        </main>
+</body>
+
+</html>

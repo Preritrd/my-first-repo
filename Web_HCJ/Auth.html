@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #000000, #0a1f44, #112d6a);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        * label {
+            color: #A0AEC0;
+        }
+
+        .navbar {
+            width: 95%;
+            margin: auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+            color: rgb(56, 27, 87);
+            gap: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid white;
+            padding: 0.2rem 1.5rem;
+            border-radius: 2rem;
+            background-color: rgb(255, 239, 209);
+            animation: unhide 7.2s cubic-bezier(0, 0, 0.26, 0.96) 1 forwards alternate;
+        }
+
+        .navbar img {
+            width: 62px;
+            height: 56px;
+            opacity: 0;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            padding: 1rem 2rem;
+            width: 25%;
+            height: auto;
+            margin: 35px auto;
+            border-radius: 1.5rem;
+            gap: 20px;
+            background: linear-gradient(135deg, #000000, #0b1d3a, #1c2128);
+            animation: pulseShadow 3s infinite ease-in-out alternate,
+                unhide 7.2s cubic-bezier(0, 0, 0.26, 0.96) 1 forwards alternate;
+        }
+
+        @keyframes pulseShadow {
+            0% {
+                box-shadow: inset 0 0 3px 4px rgba(189, 224, 254, 0.6);
+            }
+
+            25% {
+                box-shadow: inset 0 0 6px 5px rgba(189, 224, 254, 0.8);
+            }
+
+            50% {
+                box-shadow: inset 0 0 10px 6px rgba(189, 224, 254, 1);
+            }
+
+            75% {
+                box-shadow: inset 0 0 6px 5px rgba(189, 224, 254, 0.8);
+            }
+
+            100% {
+                box-shadow: inset 0 0 3px 4px rgba(189, 224, 254, 0.6);
+            }
+        }
+
+        .section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            color: rebeccapurple;
+        }
+
+        .section form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            line-height: 0.7;
+        }
+
+        .section form input {
+            border-radius: 1rem;
+            border: 1px solid rebeccapurple;
+            padding: 0.7rem;
+            width: 300px;
+        }
+
+        form label {
+            margin: 4px;
+        }
+
+        .ball :first-child {
+            width: 120px;
+            height: 120px;
+            opacity: 0.4;
+            background: linear-gradient(135deg, #000000, #0a1f44, #112d6a);
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .ball :nth-child(2) {
+            width: 220px;
+            height: 220px;
+            opacity: 0.4;
+            background: linear-gradient(135deg, #000000, #0a1f44, #112d6a);
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .ball :nth-child(3) {
+            width: 150px;
+            height: 150px;
+            opacity: 0.4;
+            background: linear-gradient(135deg, #000000, #0a1f44, #112d6a);
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) translateX(25px);
+            }
+
+            50% {
+                transform: translateY(-20px) translateX(-25px);
+            }
+        }
+
+        @keyframes unhide {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+
+        .unhidden {
+            position: absolute;
+            top: 35%;
+            left: 39%;
+            background-color: rgb(255, 239, 209);
+            border-radius: 85%;
+            animation: movelogo 2s ease-in-out 1s forwards;
+        }
+
+        @keyframes movelogo {
+            0% {
+                transform: translateY(0) translateX(0) scale(1);
+            }
+
+            100% {
+                transform: translateY(-358px) translateX(593px) scale(0.22);
+                background-color: transparent;
+            }
+        }
+
+        .authbg1 {
+            position: absolute;
+            top: 120px;
+            left: 542px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="flex">
+                <img src="logo.png" alt="Site Logo">
+                <div>PrepWise</div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="ball">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <h2>Create Account</h2>
+        <form action="/login" method="post" enctype="multipart/form-data">
+            <label for="username">Full name:</label>
+            <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="profilePic">Profile Picture:</label>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*" required><br><br>
+
+            <label for="resume">Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".pdf" required><br><br>
+
+            <input type="submit" value="Create Account">
+        </form>
+    </section>
+
+    <div class="unhidden">
+        <img src="logo.png" alt="Site Logo">
+    </div>
+
+</body>
+
+</html>
